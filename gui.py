@@ -283,7 +283,7 @@ class Window(QWidget):
         H, W, _ = self.img_3c.shape
         box_np = np.array([[xmin, ymin, xmax, ymax]])
         # print("bounding box:", box_np)
-        box_1024 = box_np / np.array() * 1024
+        box_1024 = box_np / np.array([W, H, W, H]) * 1024
 
         sam_mask = medsam_inference(medsam_model, self.embedding, box_1024, H, W)
 
