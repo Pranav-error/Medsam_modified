@@ -1,0 +1,46 @@
+================================================================================
+BREAST CANCER HISTOPATHOLOGY ANALYSIS REPORT
+================================================================================
+
+Report ID: BR_20251115170327
+Generated: 2025-11-15 17:03:27
+
+--------------------------------------------------------------------------------
+ANALYSIS RESULTS
+--------------------------------------------------------------------------------
+Stage: Stage IIIC-IV (Advanced/Metastatic)
+Confidence: 95.0%
+Risk Level: Moderate
+
+--------------------------------------------------------------------------------
+QUANTITATIVE METRICS
+--------------------------------------------------------------------------------
+Tissue Coverage: 100.00%
+Num Lesions: 1
+Avg Lesion Size: 1642.0 pixels
+Max Lesion Size: 1642.0 pixels
+Spatial Distribution: 0.0
+
+--------------------------------------------------------------------------------
+FINDINGS
+--------------------------------------------------------------------------------
+1. Extensive abnormal tissue identified (100.0% of sample)
+2. Single focal lesion detected
+
+--------------------------------------------------------------------------------
+RECOMMENDATIONS
+--------------------------------------------------------------------------------
+1. Multidisciplinary tumor board review recommended
+2. Staging workup with imaging studies
+3. Evaluate for systemic therapy options
+
+--------------------------------------------------------------------------------
+AI EXPLANATION
+--------------------------------------------------------------------------------
+The model focused primarily on the center region (importance: 60.48%). Detected tissue coverage: 100.00% of image area.
+
+--------------------------------------------------------------------------------
+DISCLAIMER
+--------------------------------------------------------------------------------
+This is an AI-assisted analysis and should be reviewed by a qualified pathologist. Final diagnosis must be made by a medical professional based on complete clinical context.
+================================================================================

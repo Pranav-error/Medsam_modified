@@ -1,0 +1,31 @@
+{
+  "report_id": "BR_20251115170327",
+  "timestamp": "2025-11-15 17:03:27",
+  "patient_info": {
+    "analyzed_date": "2025-11-15T11:33:27.277Z",
+    "image_file": "A03_03Bc_jpg.rf.ad177e5c85f36be37e2a9da90bd92c3c.jpg"
+  },
+  "analysis": {
+    "stage": "Stage IIIC-IV (Advanced/Metastatic)",
+    "confidence": "95.0%",
+    "risk_level": "Moderate"
+  },
+  "quantitative_metrics": {
+    "tissue_coverage": "100.00%",
+    "num_lesions": 1,
+    "avg_lesion_size": "1642.0 pixels",
+    "max_lesion_size": "1642.0 pixels",
+    "spatial_distribution": "0.0"
+  },
+  "findings": [
+    "Extensive abnormal tissue identified (100.0% of sample)",
+    "Single focal lesion detected"
+  ],
+  "recommendations": [
+    "Multidisciplinary tumor board review recommended",
+    "Staging workup with imaging studies",
+    "Evaluate for systemic therapy options"
+  ],
+  "ai_explanation": "The model focused primarily on the center region (importance: 60.48%). Detected tissue coverage: 100.00% of image area.",
+  "disclaimer": "This is an AI-assisted analysis and should be reviewed by a qualified pathologist. Final diagnosis must be made by a medical professional based on complete clinical context."
+}
