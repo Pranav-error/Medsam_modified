@@ -1,0 +1,18 @@
+{
+  "last_round": 1,
+  "rounds": [
+    {
+      "round": 1,
+      "aggregated_loss": 0.6768836379051208,
+      "aggregated_metrics": {},
+      "clients": [
+        {
+          "client_id": "ipv4:127.0.0.1:51098",
+          "loss": 0.6768836379051208,
+          "dice": 8.819850683128294e-10,
+          "hospital_id": 0.0
+        }
+      ]
+    }
+  ]
+}
