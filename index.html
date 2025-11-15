@@ -343,52 +343,260 @@
             background: #f7fafc;
         }
 
-        /* XAI Page */
-        .xai-container {
-            display: grid;
-            grid-template-columns: 1fr 1fr;
-            gap: 2rem;
-        }
-
-        .image-viewer {
+        /* XAI Page - Doctor Interface */
+        .upload-section {
             background: white;
-            padding: 2rem;
-            border-radius: 15px;
-            box-shadow: 0 4px 15px rgba(0,0,0,0.08);
+            padding: 3rem;
+            border-radius: 20px;
+            box-shadow: 0 4px 20px rgba(0,0,0,0.08);
+            margin-bottom: 2rem;
         }
 
         .upload-area {
             border: 3px dashed #cbd5e0;
-            border-radius: 10px;
+            border-radius: 15px;
             padding: 3rem;
             text-align: center;
             cursor: pointer;
             transition: all 0.3s;
+            background: #f8fafc;
         }
 
         .upload-area:hover {
             border-color: #667eea;
-            background: #f7fafc;
+            background: #edf2f7;
+            transform: scale(1.01);
         }
 
-        .explanation-panel {
+        .upload-area.dragover {
+            border-color: #667eea;
+            background: #e6fffa;
+            border-style: solid;
+        }
+
+        #fileInput {
+            display: none;
+        }
+
+        .loading-overlay {
+            display: none;
+            position: fixed;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: rgba(0,0,0,0.7);
+            z-index: 1000;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .loading-overlay.show {
+            display: flex;
+        }
+
+        .loading-content {
             background: white;
+            padding: 3rem;
+            border-radius: 20px;
+            text-align: center;
+            max-width: 400px;
+        }
+
+        .spinner {
+            border: 4px solid #f3f3f3;
+            border-top: 4px solid #667eea;
+            border-radius: 50%;
+            width: 60px;
+            height: 60px;
+            animation: spin 1s linear infinite;
+            margin: 0 auto 1.5rem;
+        }
+
+        @keyframes spin {
+            0% { transform: rotate(0deg); }
+            100% { transform: rotate(360deg); }
+        }
+
+        .results-container {
+            display: none;
+        }
+
+        .results-container.show {
+            display: block;
+            animation: fadeIn 0.5s;
+        }
+
+        @keyframes fadeIn {
+            from { opacity: 0; transform: translateY(20px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+
+        .analysis-panel {
+            background: white;
+            padding: 2.5rem;
+            border-radius: 20px;
+            box-shadow: 0 4px 20px rgba(0,0,0,0.08);
+            margin-bottom: 2rem;
+        }
+
+        .analysis-header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-bottom: 2rem;
+            padding-bottom: 1rem;
+            border-bottom: 3px solid #e2e8f0;
+        }
+
+        .status-badge {
+            padding: 0.75rem 1.5rem;
+            border-radius: 25px;
+            font-weight: 700;
+            font-size: 1rem;
+            text-transform: uppercase;
+            letter-spacing: 0.5px;
+        }
+
+        .status-normal { background: #d4edda; color: #155724; }
+        .status-moderate { background: #fff3cd; color: #856404; }
+        .status-high { background: #f8d7da; color: #721c24; }
+
+        .metrics-grid-results {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+            gap: 1.5rem;
+            margin: 2rem 0;
+        }
+
+        .metric-box {
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            color: white;
             padding: 2rem;
             border-radius: 15px;
-            box-shadow: 0 4px 15px rgba(0,0,0,0.08);
+            text-align: center;
+            box-shadow: 0 4px 15px rgba(102, 126, 234, 0.3);
         }
 
-        .feature-list {
-            list-style: none;
-            margin-top: 1.5rem;
+        .metric-label {
+            font-size: 0.9rem;
+            opacity: 0.9;
+            margin-bottom: 0.5rem;
+            text-transform: uppercase;
+            letter-spacing: 1px;
         }
 
-        .feature-list li {
-            padding: 1rem;
+        .metric-value-large {
+            font-size: 2.5rem;
+            font-weight: 800;
             margin: 0.5rem 0;
+        }
+
+        .xai-description {
+            background: #f0f4ff;
+            padding: 1.5rem;
+            border-radius: 12px;
+            border-left: 5px solid #667eea;
+            margin: 2rem 0;
+            line-height: 1.8;
+            font-size: 1.05rem;
+        }
+
+        .visualizations-section {
+            margin-top: 3rem;
+        }
+
+        .viz-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 2rem;
+            margin-top: 2rem;
+        }
+
+        .viz-card {
+            background: white;
+            border-radius: 15px;
+            overflow: hidden;
+            box-shadow: 0 4px 15px rgba(0,0,0,0.08);
+            transition: transform 0.3s, box-shadow 0.3s;
+        }
+
+        .viz-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 8px 25px rgba(0,0,0,0.15);
+        }
+
+        .viz-card img {
+            width: 100%;
+            height: 300px;
+            object-fit: cover;
+            border-bottom: 3px solid #667eea;
+        }
+
+        .viz-card-title {
+            padding: 1.25rem;
+            font-weight: 600;
+            text-align: center;
             background: #f7fafc;
-            border-radius: 8px;
-            border-left: 4px solid #667eea;
+            font-size: 1.1rem;
+        }
+
+        .report-section {
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            color: white;
+            padding: 2.5rem;
+            border-radius: 20px;
+            margin-top: 2rem;
+            text-align: center;
+        }
+
+        .report-section h3 {
+            font-size: 1.8rem;
+            margin-bottom: 1rem;
+        }
+
+        .report-details {
+            background: rgba(255,255,255,0.1);
+            padding: 1.5rem;
+            border-radius: 12px;
+            margin: 1.5rem 0;
+            text-align: left;
+        }
+
+        .report-details ul {
+            list-style: none;
+            margin-top: 1rem;
+        }
+
+        .report-details li {
+            padding: 0.75rem 0;
+            border-bottom: 1px solid rgba(255,255,255,0.2);
+        }
+
+        .report-details li:last-child {
+            border-bottom: none;
+        }
+
+        .btn-group {
+            display: flex;
+            gap: 1rem;
+            justify-content: center;
+            margin-top: 1.5rem;
+            flex-wrap: wrap;
+        }
+
+        .error-message {
+            background: #fed7d7;
+            color: #c53030;
+            padding: 1.5rem;
+            border-radius: 12px;
+            margin: 1rem 0;
+            border-left: 5px solid #fc8181;
+            display: none;
+        }
+
+        .error-message.show {
+            display: block;
         }
 
         /* Footer */
@@ -599,37 +807,133 @@
         </div>
     </div>
 
-    <!-- XAI PAGE -->
+    <!-- XAI PAGE - DOCTOR INTERFACE -->
     <div id="xai" class="page-section">
         <div class="container">
-            <h2 class="section-title">Explainability (XAI)</h2>
+            <h2 class="section-title">🩺 Doctor's Diagnostic Interface</h2>
+            <p style="text-align: center; color: #666; margin-bottom: 3rem; font-size: 1.1rem;">
+                AI-Powered Breast Cancer Analysis with Explainable Insights
+            </p>
+
+            <!-- Error Message -->
+            <div id="errorMessage" class="error-message"></div>
             
-            <div class="xai-container">
-                <div class="image-viewer">
-                    <h3>Clinical Image Analysis</h3>
-                    <div class="upload-area">
-                        <p style="font-size: 3rem; margin-bottom: 1rem;">📷</p>
-                        <p>Upload medical image for analysis</p>
-                        <p style="font-size: 0.9rem; color: #999; margin-top: 0.5rem;">Supports: PNG, JPG, DICOM</p>
-                    </div>
-                </div>
-                
-                <div class="explanation-panel">
-                    <h3>AI Explanation</h3>
-                    <p style="margin: 1rem 0; padding: 1rem; background: #f0f4ff; border-radius: 8px;">
-                        <strong>Prediction Confidence:</strong> 87%<br>
-                        <strong>Classification:</strong> Pneumonia Detected<br>
-                        <strong>Fairness Check:</strong> <span style="color: #10b981;">✓ Pass</span>
+            <!-- Upload Section -->
+            <div class="upload-section">
+                <h3 style="margin-bottom: 1.5rem; color: #2d3748;">📤 Upload Patient Histopathology Image</h3>
+                <div class="upload-area" id="uploadArea">
+                    <p style="font-size: 4rem; margin-bottom: 1rem;">🔬</p>
+                    <h3 style="margin-bottom: 1rem; color: #2d3748;">Drag & Drop Image Here</h3>
+                    <p style="color: #718096; margin-bottom: 1.5rem;">or click to browse</p>
+                    <button class="btn btn-primary" onclick="document.getElementById('fileInput').click()">
+                        Select Image File
+                    </button>
+                    <p style="font-size: 0.9rem; color: #a0aec0; margin-top: 1rem;">
+                        Supported: JPG, PNG, TIFF • Max size: 16MB
                     </p>
-                    
-                    <h4 style="margin-top: 2rem; margin-bottom: 1rem;">Top Contributing Features:</h4>
-                    <ul class="feature-list">
-                        <li><strong>Lung opacity (left lower lobe)</strong> - 42% contribution</li>
-                        <li><strong>Consolidation pattern</strong> - 28% contribution</li>
-                        <li><strong>Air bronchogram presence</strong> - 18% contribution</li>
-                    </ul>
+                    <input type="file" id="fileInput" accept="image/*">
                 </div>
             </div>
+
+            <!-- Results Container -->
+            <div id="resultsContainer" class="results-container">
+                <!-- Analysis Panel -->
+                <div class="analysis-panel">
+                    <div class="analysis-header">
+                        <h2>🔍 Analysis Results</h2>
+                        <span id="statusBadge" class="status-badge status-normal">Low Risk</span>
+                    </div>
+
+                    <!-- Metrics Grid -->
+                    <div class="metrics-grid-results">
+                        <div class="metric-box">
+                            <div class="metric-label">Cancer Stage</div>
+                            <div class="metric-value-large" id="stageValue">-</div>
+                        </div>
+                        <div class="metric-box">
+                            <div class="metric-label">Confidence</div>
+                            <div class="metric-value-large" id="confidenceValue">-</div>
+                        </div>
+                        <div class="metric-box">
+                            <div class="metric-label">Tissue Coverage</div>
+                            <div class="metric-value-large" id="coverageValue">-</div>
+                        </div>
+                        <div class="metric-box">
+                            <div class="metric-label">Lesions Detected</div>
+                            <div class="metric-value-large" id="lesionsValue">-</div>
+                        </div>
+                    </div>
+
+                    <!-- XAI Explanation -->
+                    <h3 style="margin-top: 2rem; color: #2d3748;">🧠 AI Explainability</h3>
+                    <div class="xai-description" id="xaiDescription">
+                        Loading AI explanation...
+                    </div>
+
+                    <!-- Action Buttons -->
+                    <div class="btn-group">
+                        <button class="btn btn-primary" onclick="generateReport()" style="padding: 1rem 2.5rem;">
+                            📄 Generate Full Report
+                        </button>
+                        <button class="btn btn-secondary" onclick="resetAnalysis()" style="padding: 1rem 2.5rem;">
+                            🔄 Analyze Another Image
+                        </button>
+                    </div>
+                </div>
+
+                <!-- Visualizations Section -->
+                <div class="visualizations-section">
+                    <h2 style="color: #2d3748; margin-bottom: 1rem;">📊 Visual Analysis</h2>
+                    <p style="color: #666; margin-bottom: 2rem;">Comprehensive visualization of AI decision-making process</p>
+                    
+                    <div class="viz-grid">
+                        <div class="viz-card">
+                            <img id="originalImage" src="" alt="Original Image">
+                            <div class="viz-card-title">🖼️ Original Histopathology</div>
+                        </div>
+                        <div class="viz-card">
+                            <img id="maskImage" src="" alt="Segmentation Mask">
+                            <div class="viz-card-title">🎯 Tumor Segmentation</div>
+                        </div>
+                        <div class="viz-card">
+                            <img id="attentionImage" src="" alt="Attention Map">
+                            <div class="viz-card-title">🔥 AI Attention Heatmap</div>
+                        </div>
+                        <div class="viz-card">
+                            <img id="xaiImage" src="" alt="XAI Overlay">
+                            <div class="viz-card-title">✨ Explainable AI Overlay</div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Report Summary -->
+                <div class="report-section">
+                    <h3>📋 Clinical Report Summary</h3>
+                    <div class="report-details">
+                        <h4 style="margin-bottom: 1rem; font-size: 1.2rem;">Key Findings:</h4>
+                        <ul id="findingsList">
+                            <li>Analysis in progress...</li>
+                        </ul>
+                    </div>
+                    <div class="btn-group">
+                        <button class="btn btn-primary" onclick="downloadReport('txt')" style="background: white; color: #667eea;">
+                            📄 Download Text Report
+                        </button>
+                        <button class="btn btn-secondary" onclick="downloadReport('json')" style="border: 2px solid white;">
+                            📊 Download JSON Data
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Loading Overlay -->
+    <div id="loadingOverlay" class="loading-overlay">
+        <div class="loading-content">
+            <div class="spinner"></div>
+            <h3 style="margin-bottom: 0.5rem;">🧬 Analyzing Image...</h3>
+            <p style="color: #666;">AI is processing your histopathology slide</p>
         </div>
     </div>
 
@@ -673,22 +977,302 @@
     </footer>
 
     <script>
+        // API Configuration
+        const API_URL = 'http://localhost:5001';
+        let currentFilename = null;
+        let currentResults = null;
+        let generatedReportId = null;
+
+        // Page Navigation
         function showPage(pageId) {
-            // Hide all pages
             const pages = document.querySelectorAll('.page-section');
             pages.forEach(page => page.classList.remove('active'));
-            
-            // Show selected page
             document.getElementById(pageId).classList.add('active');
+            window.scrollTo({ top: 0, behavior: 'smooth' });
+        }
+
+        function startTraining() {
+            alert('Starting Federated Learning Simulation...\n\nThis will train the model across Hospital A, B, and C without sharing patient data!');
+            showPage('training');
+        }
+
+        // File Upload Handlers
+        const uploadArea = document.getElementById('uploadArea');
+        const fileInput = document.getElementById('fileInput');
+
+        // Drag and drop
+        uploadArea.addEventListener('click', () => fileInput.click());
+
+        uploadArea.addEventListener('dragover', (e) => {
+            e.preventDefault();
+            uploadArea.classList.add('dragover');
+        });
+
+        uploadArea.addEventListener('dragleave', () => {
+            uploadArea.classList.remove('dragover');
+        });
+
+        uploadArea.addEventListener('drop', (e) => {
+            e.preventDefault();
+            uploadArea.classList.remove('dragover');
+            const file = e.dataTransfer.files[0];
+            if (file && file.type.startsWith('image/')) {
+                handleFileUpload(file);
+            } else {
+                showError('Please upload a valid image file (JPG, PNG, TIFF)');
+            }
+        });
+
+        fileInput.addEventListener('change', (e) => {
+            const file = e.target.files[0];
+            if (file) handleFileUpload(file);
+        });
+
+        // Main Upload and Prediction Flow
+        async function handleFileUpload(file) {
+            // Validate file size (16MB limit)
+            if (file.size > 16 * 1024 * 1024) {
+                showError('File size exceeds 16MB limit. Please upload a smaller image.');
+                return;
+            }
+
+            showLoading(true);
+            hideError();
+
+            try {
+                // Step 1: Upload file to backend
+                console.log('Uploading file:', file.name);
+                const formData = new FormData();
+                formData.append('file', file);
+
+                const uploadResponse = await fetch(`${API_URL}/upload`, {
+                    method: 'POST',
+                    body: formData
+                });
+
+                if (!uploadResponse.ok) {
+                    const error = await uploadResponse.json();
+                    throw new Error(error.error || 'Upload failed');
+                }
+
+                const uploadData = await uploadResponse.json();
+                currentFilename = uploadData.filename;
+                console.log('File uploaded successfully:', currentFilename);
+
+                // Step 2: Get prediction automatically
+                await getPrediction(currentFilename, file);
+
+            } catch (error) {
+                console.error('Upload error:', error);
+                showError(`Error: ${error.message}. Make sure the backend is running (python app_backend.py)`);
+                showLoading(false);
+            }
+        }
+
+        async function getPrediction(filename, originalFile) {
+            try {
+                console.log('Getting prediction for:', filename);
+
+                const response = await fetch(`${API_URL}/predict`, {
+                    method: 'POST',
+                    headers: { 'Content-Type': 'application/json' },
+                    body: JSON.stringify({
+                        filename: filename,
+                        bbox: [0, 0, 1024, 1024]
+                    })
+                });
+
+                if (!response.ok) {
+                    const error = await response.json();
+                    throw new Error(error.error || 'Prediction failed');
+                }
+
+                const data = await response.json();
+                currentResults = data;
+                console.log('Prediction successful:', data);
+
+                // Display results
+                displayResults(data, originalFile);
+                showLoading(false);
+
+            } catch (error) {
+                console.error('Prediction error:', error);
+                showError(`Prediction Error: ${error.message}`);
+                showLoading(false);
+            }
+        }
+
+        function displayResults(data, originalFile) {
+            // Show results container with animation
+            const resultsContainer = document.getElementById('resultsContainer');
+            resultsContainer.classList.add('show');
+
+            // Update metrics
+            document.getElementById('stageValue').textContent = data.stage;
+            document.getElementById('confidenceValue').textContent = `${(data.confidence * 100).toFixed(1)}%`;
+            document.getElementById('coverageValue').textContent = `${(data.mask_coverage * 100).toFixed(1)}%`;
+            document.getElementById('lesionsValue').textContent = data.mask_features.num_lesions;
+
+            // Update status badge
+            const statusBadge = document.getElementById('statusBadge');
+            if (data.stage.includes('Normal') || data.stage.includes('Benign')) {
+                statusBadge.className = 'status-badge status-normal';
+                statusBadge.textContent = 'Low Risk';
+            } else if (data.stage.includes('Stage 0') || data.stage.includes('Stage I')) {
+                statusBadge.className = 'status-badge status-moderate';
+                statusBadge.textContent = 'Moderate Risk';
+            } else {
+                statusBadge.className = 'status-badge status-high';
+                statusBadge.textContent = 'High Risk';
+            }
+
+            // Update XAI explanation
+            document.getElementById('xaiDescription').innerHTML = `
+                <strong>🎯 AI Focus:</strong> ${data.xai_description}<br><br>
+                <strong>🔬 Feature Analysis:</strong> The AI model analyzed ${Object.keys(data.feature_importance.all_scores).length} regions of the image.
+            `;
+
+            // Update findings list
+            const findingsList = document.getElementById('findingsList');
+            findingsList.innerHTML = `
+                <li><strong>Tissue Analysis:</strong> ${(data.mask_coverage * 100).toFixed(1)}% of tissue shows abnormal characteristics</li>
+                <li><strong>Lesion Count:</strong> ${data.mask_features.num_lesions} distinct lesion(s) detected</li>
+                <li><strong>Average Lesion Size:</strong> ${data.mask_features.avg_lesion_size.toFixed(1)} pixels</li>
+                <li><strong>Maximum Lesion Size:</strong> ${data.mask_features.max_lesion_size.toFixed(1)} pixels</li>
+                <li><strong>Spatial Distribution:</strong> ${data.mask_features.spatial_spread.toFixed(1)} (spread metric)</li>
+                <li><strong>Diagnostic Stage:</strong> ${data.stage}</li>
+                <li><strong>Model Confidence:</strong> ${(data.confidence * 100).toFixed(1)}%</li>
+            `;
+
+            // Display original image
+            const reader = new FileReader();
+            reader.onload = (e) => {
+                document.getElementById('originalImage').src = e.target.result;
+            };
+            reader.readAsDataURL(originalFile);
+
+            // Display AI-generated visualizations
+            document.getElementById('maskImage').src = data.segmentation_mask;
+            document.getElementById('attentionImage').src = data.attention_map;
+            document.getElementById('xaiImage').src = data.xai_overlay;
+
+            // Scroll to results
+            setTimeout(() => {
+                resultsContainer.scrollIntoView({ behavior: 'smooth', block: 'start' });
+            }, 300);
+        }
+
+        async function generateReport() {
+            if (!currentResults) {
+                showError('No analysis results available. Please upload an image first.');
+                return;
+            }
+
+            showLoading(true);
+
+            try {
+                console.log('Generating clinical report...');
+
+                const response = await fetch(`${API_URL}/report`, {
+                    method: 'POST',
+                    headers: { 'Content-Type': 'application/json' },
+                    body: JSON.stringify({
+                        filename: currentFilename,
+                        mask_features: currentResults.mask_features,
+                        stage: currentResults.stage,
+                        confidence: currentResults.confidence,
+                        xai_data: { description: currentResults.xai_description },
+                        patient_info: {
+                            analyzed_date: new Date().toISOString(),
+                            image_file: currentFilename
+                        }
+                    })
+                });
+
+                if (!response.ok) {
+                    const error = await response.json();
+                    throw new Error(error.error || 'Report generation failed');
+                }
+
+                const data = await response.json();
+                generatedReportId = data.report_id;
+                console.log('Report generated:', data.report_id);
+
+                showLoading(false);
+                alert(`✅ Report Generated Successfully!\n\nReport ID: ${data.report_id}\n\nClick OK to continue, then use the download buttons to get your report.`);
+
+            } catch (error) {
+                console.error('Report generation error:', error);
+                showError(`Report Error: ${error.message}`);
+                showLoading(false);
+            }
+        }
+
+        function downloadReport(format) {
+            if (!generatedReportId) {
+                alert('Please generate a report first by clicking "Generate Full Report"');
+                return;
+            }
+
+            const url = `${API_URL}/download_report/${generatedReportId}?format=${format}`;
+            window.open(url, '_blank');
+        }
+
+        function resetAnalysis() {
+            // Hide results
+            document.getElementById('resultsContainer').classList.remove('show');
+            
+            // Reset file input
+            fileInput.value = '';
+            
+            // Clear state
+            currentFilename = null;
+            currentResults = null;
+            generatedReportId = null;
             
             // Scroll to top
             window.scrollTo({ top: 0, behavior: 'smooth' });
         }
 
-        function startTraining() {
-            alert('Starting Federated Training Simulation...\n\nThis will train the model across Hospital A, B, and C without sharing patient data!');
-            showPage('training');
+        // Utility Functions
+        function showLoading(show) {
+            const overlay = document.getElementById('loadingOverlay');
+            if (show) {
+                overlay.classList.add('show');
+            } else {
+                overlay.classList.remove('show');
+            }
         }
+
+        function showError(message) {
+            const errorDiv = document.getElementById('errorMessage');
+            errorDiv.textContent = '⚠️ ' + message;
+            errorDiv.classList.add('show');
+            
+            // Auto-hide after 8 seconds
+            setTimeout(() => {
+                errorDiv.classList.remove('show');
+            }, 8000);
+        }
+
+        function hideError() {
+            document.getElementById('errorMessage').classList.remove('show');
+        }
+
+        // Check backend status on page load
+        window.addEventListener('DOMContentLoaded', async () => {
+            try {
+                const response = await fetch(`${API_URL}/health`);
+                if (response.ok) {
+                    const data = await response.json();
+                    console.log('✅ Backend connected:', data);
+                } else {
+                    console.warn('⚠️ Backend not responding properly');
+                }
+            } catch (error) {
+                console.warn('⚠️ Backend not running. Start with: python app_backend.py');
+            }
+        });
     </script>
 </body>
 </html>

@@ -1,0 +1,47 @@
+================================================================================
+BREAST CANCER HISTOPATHOLOGY ANALYSIS REPORT
+================================================================================
+
+Report ID: BR_20251115165002
+Generated: 2025-11-15 16:50:02
+
+--------------------------------------------------------------------------------
+ANALYSIS RESULTS
+--------------------------------------------------------------------------------
+Stage: Stage IIIC-IV (Advanced/Metastatic)
+Confidence: 95.0%
+Risk Level: Moderate
+
+--------------------------------------------------------------------------------
+QUANTITATIVE METRICS
+--------------------------------------------------------------------------------
+Tissue Coverage: 88.45%
+Num Lesions: 46
+Avg Lesion Size: 43.0 pixels
+Max Lesion Size: 1541.8 pixels
+Spatial Distribution: 217.9
+
+--------------------------------------------------------------------------------
+FINDINGS
+--------------------------------------------------------------------------------
+1. Extensive abnormal tissue identified (88.5% of sample)
+2. Multifocal disease with 46 distinct lesions
+3. Wide spatial distribution suggesting potential diffuse involvement
+
+--------------------------------------------------------------------------------
+RECOMMENDATIONS
+--------------------------------------------------------------------------------
+1. Multidisciplinary tumor board review recommended
+2. Staging workup with imaging studies
+3. Evaluate for systemic therapy options
+
+--------------------------------------------------------------------------------
+AI EXPLANATION
+--------------------------------------------------------------------------------
+The model focused primarily on the center region (importance: 58.25%). Detected tissue coverage: 88.45% of image area.
+
+--------------------------------------------------------------------------------
+DISCLAIMER
+--------------------------------------------------------------------------------
+This is an AI-assisted analysis and should be reviewed by a qualified pathologist. Final diagnosis must be made by a medical professional based on complete clinical context.
+================================================================================

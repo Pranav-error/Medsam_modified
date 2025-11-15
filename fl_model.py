@@ -2,13 +2,13 @@ import torch
 import torch.nn as nn
 import torch.nn.functional as F
 from segment_anything import sam_model_registry
-from opacus.utils.module_modification import convert_batchnorm_modules
+# from opacus.utils.module_modification import convert_batchnorm_modules
 
 class MedSAM_FL(nn.Module):
     def __init__(self, checkpoint_path, device='cpu'):
         super().__init__()
         self.sam = sam_model_registry["vit_b"](checkpoint=checkpoint_path)
-        self.sam = convert_batchnorm_modules(self.sam)  # Replace BatchNorm with GroupNorm
+        # self.sam = convert_batchnorm_modules(self.sam)  # Replace BatchNorm with GroupNorm
         # Disable inplace=True in ReLU layers
         for module in self.sam.modules():
             if isinstance(module, nn.ReLU):
