@@ -1,8 +1,10 @@
 import { useState, useEffect } from "react";
 import { Activity, Clock, Users, Zap } from "lucide-react";
 import { Progress } from "@/components/ui/progress";
+import { useToast } from "@/hooks/use-toast";
 
 const Training = () => {
+  const { toast } = useToast();
   const [progress, setProgress] = useState(75);
   const [currentRound, setCurrentRound] = useState(3);
 

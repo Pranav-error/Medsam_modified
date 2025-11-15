@@ -1,13 +1,12 @@
 import { useState } from "react";
 import { Upload, CheckCircle, AlertCircle } from "lucide-react";
 import { Button } from "@/components/ui/button";
+import { useToast } from "@/hooks/use-toast";
 
 const XAI = () => {
   const [hasImage, setHasImage] = useState(false);
-
-  const handleUpload = () => {
-    setHasImage(true);
-  };
+  const { toast } = useToast();
+  const [imageInfo, setImageInfo] = useState(null);
 
   const features = [
     {
@@ -53,33 +52,83 @@ const XAI = () => {
                   ? "border-primary bg-primary/5"
                   : "border-border hover:border-primary hover:bg-muted/30 cursor-pointer"
               }`}
-              onClick={!hasImage ? handleUpload : undefined}
             >
+              <input
+                type="file"
+                accept="image/*"
+                className="hidden"
+                id="imageUploadInput"
+                onChange={(e) => {
+                  const file = e.target.files?.[0];
+                  if (!file) return;
+                
+                  // --- CONDITION 1: File must be ABOVE 5MB ---
+                  const minSizeMB = 5;
+                  if (file.size < minSizeMB * 1024 * 1024) {
+                    toast({
+                      title: "File Too Small",
+                      description: `Image must be bigger than ${minSizeMB} MB.`,
+                      variant: "destructive",
+                    });
+                    return;
+                  }
+                
+                  // --- CONDITION 2: Resolution must be ABOVE 512x512 ---
+                  const img = new Image();
+                  img.src = URL.createObjectURL(file);
+                
+                  img.onload = () => {
+                    const width = img.width;
+                    const height = img.height;
+                  
+                    const minWidth = 512;
+                    const minHeight = 512;
+                  
+                    if (width <= minWidth || height <= minHeight) {
+                      toast({
+                        title: "Resolution Too Small",
+                        description: `Image must be larger than ${minWidth}×${minHeight} pixels.`,
+                        variant: "destructive",
+                      });
+                      return;
+                    }
+                  
+                    // VALID FILE → Accept
+                    setHasImage(true);
+                    setImageInfo({
+                      size: (file.size / (1024 * 1024)).toFixed(1),
+                      width,
+                      height,
+                    });
+                  
+                    toast({
+                      title: "Image Accepted",
+                      description: "Your upload meets all requirements.",
+                    });
+                  };
+                }}
+              />
+
               {!hasImage ? (
-                <div className="animate-fade-in">
+                <label htmlFor="imageUploadInput" className="block cursor-pointer">
                   <Upload className="w-16 h-16 mx-auto mb-4 text-muted-foreground" />
-                  <p className="text-lg font-medium mb-2">
-                    Upload medical image for analysis
-                  </p>
-                  <p className="text-sm text-muted-foreground">
-                    Supports: PNG, JPG, DICOM
-                  </p>
-                </div>
+                  <p className="text-lg font-medium mb-2">Upload medical image for analysis</p>
+                  <p className="text-sm text-muted-foreground">Supports: PNG, JPG, DICOM</p>
+                </label>
               ) : (
                 <div className="animate-scale-in">
                   <div className="w-full h-64 bg-gradient-to-br from-muted to-muted/50 rounded-lg mb-4 flex items-center justify-center">
                     <span className="text-4xl">🫁</span>
                   </div>
                   <p className="text-sm text-muted-foreground">
-                    Chest X-Ray • 512x512px • 2.4MB
+                    {`Resolution: ${imageInfo.width}×${imageInfo.height}px • ${imageInfo.size}MB`}
                   </p>
                 </div>
               )}
             </div>
-
             {!hasImage && (
               <Button
-                onClick={handleUpload}
+                onClick={() => document.getElementById("imageUploadInput")?.click()}
                 className="w-full mt-6 bg-gradient-to-r from-primary to-secondary hover:scale-105 transition-transform duration-200"
               >
                 Select Image
