@@ -1,16 +1,1030 @@
 {
-  "last_round": 1,
+  "last_round": 5,
   "rounds": [
     {
       "round": 1,
-      "aggregated_loss": 0.6768836379051208,
+      "aggregated_loss": 0.623,
+      "aggregated_metrics": {
+        "dice": 0.71
+      },
+      "clients": [
+        {
+          "client_id": "0",
+          "loss": 0.64,
+          "dice": 0.7,
+          "hospital_id": 0
+        },
+        {
+          "client_id": "1",
+          "loss": 0.61,
+          "dice": 0.72,
+          "hospital_id": 1
+        },
+        {
+          "client_id": "2",
+          "loss": 0.62,
+          "dice": 0.71,
+          "hospital_id": 2
+        }
+      ]
+    },
+    {
+      "round": 1,
+      "aggregated_loss": 0.7780696029932994,
       "aggregated_metrics": {},
       "clients": [
         {
-          "client_id": "ipv4:127.0.0.1:51098",
-          "loss": 0.6768836379051208,
-          "dice": 8.819850683128294e-10,
+          "client_id": "b1d6b438e29342c2b8529b008ad1e0d7",
+          "loss": 0.7763072848320007,
+          "dice": 0.11719748759453462,
           "hospital_id": 0.0
+        },
+        {
+          "client_id": "b0fe3cc5fddb4b5eb3d9b4a6c7b2e01e",
+          "loss": 0.7825185060501099,
+          "dice": 0.1437501162290573,
+          "hospital_id": 1.0
+        },
+        {
+          "client_id": "050cc39902b64e36a398b67f3182cdeb",
+          "loss": 0.7817714214324951,
+          "dice": 0.1501259058713913,
+          "hospital_id": 2.0
+        }
+      ]
+    },
+    {
+      "round": 2,
+      "aggregated_loss": 0.7029315570615372,
+      "aggregated_metrics": {},
+      "clients": [
+        {
+          "client_id": "b1d6b438e29342c2b8529b008ad1e0d7",
+          "loss": 0.6943478584289551,
+          "dice": 0.09333293411465413,
+          "hospital_id": 0.0
+        },
+        {
+          "client_id": "b0fe3cc5fddb4b5eb3d9b4a6c7b2e01e",
+          "loss": 0.7225587368011475,
+          "dice": 0.14468745421618223,
+          "hospital_id": 1.0
+        },
+        {
+          "client_id": "050cc39902b64e36a398b67f3182cdeb",
+          "loss": 0.7230039834976196,
+          "dice": 0.1244421461597085,
+          "hospital_id": 2.0
+        }
+      ]
+    },
+    {
+      "round": 3,
+      "aggregated_loss": 0.3836566299762366,
+      "aggregated_metrics": {},
+      "clients": [
+        {
+          "client_id": "b1d6b438e29342c2b8529b008ad1e0d7",
+          "loss": 0.3435150384902954,
+          "dice": 9.675542736003567e-09,
+          "hospital_id": 0.0
+        },
+        {
+          "client_id": "b0fe3cc5fddb4b5eb3d9b4a6c7b2e01e",
+          "loss": 0.4756835997104645,
+          "dice": 8.517840183186465e-10,
+          "hospital_id": 1.0
+        },
+        {
+          "client_id": "050cc39902b64e36a398b67f3182cdeb",
+          "loss": 0.4772845208644867,
+          "dice": 8.25908043344814e-10,
+          "hospital_id": 2.0
+        }
+      ]
+    },
+    {
+      "round": 4,
+      "aggregated_loss": 0.3800763223531111,
+      "aggregated_metrics": {},
+      "clients": [
+        {
+          "client_id": "b0fe3cc5fddb4b5eb3d9b4a6c7b2e01e",
+          "loss": 0.3887934982776642,
+          "dice": 8.390225250676231e-10,
+          "hospital_id": 1.0
+        },
+        {
+          "client_id": "b1d6b438e29342c2b8529b008ad1e0d7",
+          "loss": 0.3652523458003998,
+          "dice": 1.0382586666539143e-08,
+          "hospital_id": 0.0
+        },
+        {
+          "client_id": "050cc39902b64e36a398b67f3182cdeb",
+          "loss": 0.439920037984848,
+          "dice": 7.068305316049184e-10,
+          "hospital_id": 2.0
+        }
+      ]
+    },
+    {
+      "round": 5,
+      "aggregated_loss": 0.31793101947262603,
+      "aggregated_metrics": {},
+      "clients": [
+        {
+          "client_id": "b0fe3cc5fddb4b5eb3d9b4a6c7b2e01e",
+          "loss": 0.39862844347953796,
+          "dice": 7.762884987605467e-10,
+          "hospital_id": 1.0
+        },
+        {
+          "client_id": "b1d6b438e29342c2b8529b008ad1e0d7",
+          "loss": 0.2850334346294403,
+          "dice": 1.0342778845085543e-08,
+          "hospital_id": 0.0
+        },
+        {
+          "client_id": "050cc39902b64e36a398b67f3182cdeb",
+          "loss": 0.389384925365448,
+          "dice": 8.301192996884588e-10,
+          "hospital_id": 2.0
+        }
+      ]
+    },
+    {
+      "round": 1,
+      "aggregated_loss": 0.643143872419993,
+      "aggregated_metrics": {},
+      "clients": [
+        {
+          "client_id": "c6d3c44581f0494abdafc4af6a200bcb",
+          "loss": 0.6432347297668457,
+          "dice": 0.1332413125783205,
+          "hospital_id": 0.0
+        },
+        {
+          "client_id": "e4ce8622c40d4ca88315d9c1da54218f",
+          "loss": 0.642890214920044,
+          "dice": 8.781650684408504e-10,
+          "hospital_id": 1.0
+        },
+        {
+          "client_id": "d43a2df50a9a47c49e1590179a097dcd",
+          "loss": 0.6433066725730896,
+          "dice": 0.13353561237454414,
+          "hospital_id": 0.0
+        }
+      ]
+    },
+    {
+      "round": 2,
+      "aggregated_loss": 0.631228486696879,
+      "aggregated_metrics": {},
+      "clients": [
+        {
+          "client_id": "e4ce8622c40d4ca88315d9c1da54218f",
+          "loss": 0.6307284832000732,
+          "dice": 8.362874837075651e-10,
+          "hospital_id": 1.0
+        },
+        {
+          "client_id": "d43a2df50a9a47c49e1590179a097dcd",
+          "loss": 0.6313307285308838,
+          "dice": 0.14169228170067072,
+          "hospital_id": 0.0
+        },
+        {
+          "client_id": "c6d3c44581f0494abdafc4af6a200bcb",
+          "loss": 0.6316262483596802,
+          "dice": 0.14458005502820015,
+          "hospital_id": 0.0
+        }
+      ]
+    },
+    {
+      "round": 3,
+      "aggregated_loss": 0.600690484046936,
+      "aggregated_metrics": {},
+      "clients": [
+        {
+          "client_id": "e4ce8622c40d4ca88315d9c1da54218f",
+          "loss": 0.6006418466567993,
+          "dice": 8.279460242399672e-10,
+          "hospital_id": 1.0
+        },
+        {
+          "client_id": "c6d3c44581f0494abdafc4af6a200bcb",
+          "loss": 0.6013309955596924,
+          "dice": 0.148404773324728,
+          "hospital_id": 0.0
+        },
+        {
+          "client_id": "d43a2df50a9a47c49e1590179a097dcd",
+          "loss": 0.6000986099243164,
+          "dice": 0.13686248566955328,
+          "hospital_id": 0.0
+        }
+      ]
+    },
+    {
+      "round": 4,
+      "aggregated_loss": 0.4164063235123952,
+      "aggregated_metrics": {},
+      "clients": [
+        {
+          "client_id": "e4ce8622c40d4ca88315d9c1da54218f",
+          "loss": 0.4195087254047394,
+          "dice": 7.472930468876982e-10,
+          "hospital_id": 1.0
+        },
+        {
+          "client_id": "d43a2df50a9a47c49e1590179a097dcd",
+          "loss": 0.417535662651062,
+          "dice": 0.1832141075283289,
+          "hospital_id": 0.0
+        },
+        {
+          "client_id": "c6d3c44581f0494abdafc4af6a200bcb",
+          "loss": 0.4121745824813843,
+          "dice": 0.15766155906021595,
+          "hospital_id": 0.0
+        }
+      ]
+    },
+    {
+      "round": 5,
+      "aggregated_loss": 0.08502066880464554,
+      "aggregated_metrics": {},
+      "clients": [
+        {
+          "client_id": "e4ce8622c40d4ca88315d9c1da54218f",
+          "loss": 0.0829232931137085,
+          "dice": 0.7139763906598091,
+          "hospital_id": 1.0
+        },
+        {
+          "client_id": "c6d3c44581f0494abdafc4af6a200bcb",
+          "loss": 0.08620575070381165,
+          "dice": 0.5645736902952194,
+          "hospital_id": 0.0
+        },
+        {
+          "client_id": "d43a2df50a9a47c49e1590179a097dcd",
+          "loss": 0.08593296259641647,
+          "dice": 0.5633438527584076,
+          "hospital_id": 0.0
+        }
+      ]
+    },
+    {
+      "round": 1,
+      "aggregated_loss": 0.7527919569105472,
+      "aggregated_metrics": {},
+      "clients": [
+        {
+          "client_id": "d47e4aed0fc744638dbf267fa31f4c02",
+          "loss": 0.7568502426147461,
+          "dice": 0.13879419770091772,
+          "hospital_id": 2.0
+        },
+        {
+          "client_id": "a8b2f26ff9b34ebcbdbedeb2f8de3794",
+          "loss": 0.751011312007904,
+          "dice": 0.10267018545985322,
+          "hospital_id": 0.0
+        },
+        {
+          "client_id": "a3d656e8d5b34802bf5abe06acc3844c",
+          "loss": 0.756969153881073,
+          "dice": 0.13696790486574173,
+          "hospital_id": 1.0
+        }
+      ]
+    },
+    {
+      "round": 2,
+      "aggregated_loss": 0.6607936519496845,
+      "aggregated_metrics": {},
+      "clients": [
+        {
+          "client_id": "a3d656e8d5b34802bf5abe06acc3844c",
+          "loss": 0.6877883672714233,
+          "dice": 4.2130171226673063e-10,
+          "hospital_id": 1.0
+        },
+        {
+          "client_id": "d47e4aed0fc744638dbf267fa31f4c02",
+          "loss": 0.6881759166717529,
+          "dice": 4.0396895550909306e-10,
+          "hospital_id": 2.0
+        },
+        {
+          "client_id": "a8b2f26ff9b34ebcbdbedeb2f8de3794",
+          "loss": 0.6490364670753479,
+          "dice": 0.09922696054107635,
+          "hospital_id": 0.0
+        }
+      ]
+    },
+    {
+      "round": 3,
+      "aggregated_loss": 0.30932921508573136,
+      "aggregated_metrics": {},
+      "clients": [
+        {
+          "client_id": "a8b2f26ff9b34ebcbdbedeb2f8de3794",
+          "loss": 0.26676952838897705,
+          "dice": 0.04441229146716462,
+          "hospital_id": 0.0
+        },
+        {
+          "client_id": "a3d656e8d5b34802bf5abe06acc3844c",
+          "loss": 0.397896409034729,
+          "dice": 9.664311850787755e-10,
+          "hospital_id": 1.0
+        },
+        {
+          "client_id": "d47e4aed0fc744638dbf267fa31f4c02",
+          "loss": 0.4176005721092224,
+          "dice": 8.361139350321345e-10,
+          "hospital_id": 2.0
+        }
+      ]
+    },
+    {
+      "round": 4,
+      "aggregated_loss": 0.29986994727602545,
+      "aggregated_metrics": {},
+      "clients": [
+        {
+          "client_id": "d47e4aed0fc744638dbf267fa31f4c02",
+          "loss": 0.4008479118347168,
+          "dice": 6.89395943109794e-10,
+          "hospital_id": 2.0
+        },
+        {
+          "client_id": "a3d656e8d5b34802bf5abe06acc3844c",
+          "loss": 0.37106436491012573,
+          "dice": 8.356620326277486e-10,
+          "hospital_id": 1.0
+        },
+        {
+          "client_id": "a8b2f26ff9b34ebcbdbedeb2f8de3794",
+          "loss": 0.2626434862613678,
+          "dice": 0.039691025284244806,
+          "hospital_id": 0.0
+        }
+      ]
+    },
+    {
+      "round": 5,
+      "aggregated_loss": 0.29236808587919993,
+      "aggregated_metrics": {},
+      "clients": [
+        {
+          "client_id": "a8b2f26ff9b34ebcbdbedeb2f8de3794",
+          "loss": 0.27120816707611084,
+          "dice": 0.02427129537446072,
+          "hospital_id": 0.0
+        },
+        {
+          "client_id": "a3d656e8d5b34802bf5abe06acc3844c",
+          "loss": 0.3364556133747101,
+          "dice": 8.615530025513074e-10,
+          "hospital_id": 1.0
+        },
+        {
+          "client_id": "d47e4aed0fc744638dbf267fa31f4c02",
+          "loss": 0.3461451828479767,
+          "dice": 8.462415768129006e-10,
+          "hospital_id": 2.0
+        }
+      ]
+    },
+    {
+      "round": 1,
+      "aggregated_loss": 0.7114487605274848,
+      "aggregated_metrics": {},
+      "clients": [
+        {
+          "client_id": "961329d8d4cc48d4af8c0251728bce8b",
+          "loss": 0.7102288603782654,
+          "dice": 0.1557029578834772,
+          "hospital_id": 2.0
+        },
+        {
+          "client_id": "4f13175193514ce4b7d43561dad318ae",
+          "loss": 0.7118867039680481,
+          "dice": 0.10153140805384799,
+          "hospital_id": 0.0
+        },
+        {
+          "client_id": "f705a6ecea6249bf992c3652250ef61d",
+          "loss": 0.7106431722640991,
+          "dice": 0.13796721119433641,
+          "hospital_id": 1.0
+        }
+      ]
+    },
+    {
+      "round": 2,
+      "aggregated_loss": 0.6246112720021662,
+      "aggregated_metrics": {},
+      "clients": [
+        {
+          "client_id": "f705a6ecea6249bf992c3652250ef61d",
+          "loss": 0.6387811303138733,
+          "dice": 7.890253936326808e-10,
+          "hospital_id": 1.0
+        },
+        {
+          "client_id": "4f13175193514ce4b7d43561dad318ae",
+          "loss": 0.6187602281570435,
+          "dice": 0.09803439268049456,
+          "hospital_id": 0.0
+        },
+        {
+          "client_id": "961329d8d4cc48d4af8c0251728bce8b",
+          "loss": 0.6375024914741516,
+          "dice": 8.607504778379571e-10,
+          "hospital_id": 2.0
+        }
+      ]
+    },
+    {
+      "round": 3,
+      "aggregated_loss": 0.29128400447233666,
+      "aggregated_metrics": {},
+      "clients": [
+        {
+          "client_id": "961329d8d4cc48d4af8c0251728bce8b",
+          "loss": 0.3582528531551361,
+          "dice": 8.575715415570784e-10,
+          "hospital_id": 2.0
+        },
+        {
+          "client_id": "4f13175193514ce4b7d43561dad318ae",
+          "loss": 0.2640400528907776,
+          "dice": 0.03582886427741598,
+          "hospital_id": 0.0
+        },
+        {
+          "client_id": "f705a6ecea6249bf992c3652250ef61d",
+          "loss": 0.35031843185424805,
+          "dice": 9.00558183580813e-10,
+          "hospital_id": 1.0
+        }
+      ]
+    },
+    {
+      "round": 4,
+      "aggregated_loss": 0.2952128660004094,
+      "aggregated_metrics": {},
+      "clients": [
+        {
+          "client_id": "f705a6ecea6249bf992c3652250ef61d",
+          "loss": 0.3349866569042206,
+          "dice": 8.479626167900989e-10,
+          "hospital_id": 1.0
+        },
+        {
+          "client_id": "4f13175193514ce4b7d43561dad318ae",
+          "loss": 0.2735251784324646,
+          "dice": 0.023414155421149288,
+          "hospital_id": 0.0
+        },
+        {
+          "client_id": "961329d8d4cc48d4af8c0251728bce8b",
+          "loss": 0.3557446300983429,
+          "dice": 7.473609717201235e-10,
+          "hospital_id": 2.0
+        }
+      ]
+    },
+    {
+      "round": 5,
+      "aggregated_loss": 0.3033089615264029,
+      "aggregated_metrics": {},
+      "clients": [
+        {
+          "client_id": "4f13175193514ce4b7d43561dad318ae",
+          "loss": 0.28207170963287354,
+          "dice": 0.056594006459203525,
+          "hospital_id": 0.0
+        },
+        {
+          "client_id": "f705a6ecea6249bf992c3652250ef61d",
+          "loss": 0.35017523169517517,
+          "dice": 8.526684289189568e-10,
+          "hospital_id": 1.0
+        },
+        {
+          "client_id": "961329d8d4cc48d4af8c0251728bce8b",
+          "loss": 0.35466498136520386,
+          "dice": 8.217996491644008e-10,
+          "hospital_id": 2.0
+        }
+      ]
+    },
+    {
+      "round": 1,
+      "aggregated_loss": 0.7307368426952722,
+      "aggregated_metrics": {},
+      "clients": [
+        {
+          "client_id": "d2c397ebfdde4bfc891c10b3365f8d25",
+          "loss": 0.7274686098098755,
+          "dice": 0.10198196397490196,
+          "hospital_id": 0.0
+        },
+        {
+          "client_id": "e4ca51827731409ba321c8c52d99a7d3",
+          "loss": 0.7388293743133545,
+          "dice": 0.14095119386911392,
+          "hospital_id": 1.0
+        },
+        {
+          "client_id": "2a46c762e43d4d04b9dfe95b1ef4c667",
+          "loss": 0.7377598881721497,
+          "dice": 0.1605918426066637,
+          "hospital_id": 2.0
+        }
+      ]
+    },
+    {
+      "round": 2,
+      "aggregated_loss": 0.358958455751527,
+      "aggregated_metrics": {},
+      "clients": [
+        {
+          "client_id": "2a46c762e43d4d04b9dfe95b1ef4c667",
+          "loss": 0.5705691576004028,
+          "dice": 6.984179484748054e-10,
+          "hospital_id": 2.0
+        },
+        {
+          "client_id": "e4ca51827731409ba321c8c52d99a7d3",
+          "loss": 0.5634130835533142,
+          "dice": 7.413941127687451e-10,
+          "hospital_id": 1.0
+        },
+        {
+          "client_id": "d2c397ebfdde4bfc891c10b3365f8d25",
+          "loss": 0.268998384475708,
+          "dice": 0.038942717478258185,
+          "hospital_id": 0.0
+        }
+      ]
+    },
+    {
+      "round": 3,
+      "aggregated_loss": 0.37815628580327304,
+      "aggregated_metrics": {},
+      "clients": [
+        {
+          "client_id": "e4ca51827731409ba321c8c52d99a7d3",
+          "loss": 0.4973023235797882,
+          "dice": 8.110626961710388e-10,
+          "hospital_id": 1.0
+        },
+        {
+          "client_id": "2a46c762e43d4d04b9dfe95b1ef4c667",
+          "loss": 0.5058713555335999,
+          "dice": 7.623235445675114e-10,
+          "hospital_id": 2.0
+        },
+        {
+          "client_id": "d2c397ebfdde4bfc891c10b3365f8d25",
+          "loss": 0.3247809112071991,
+          "dice": 0.01072114851873217,
+          "hospital_id": 0.0
+        }
+      ]
+    },
+    {
+      "round": 4,
+      "aggregated_loss": 0.3543828180376089,
+      "aggregated_metrics": {},
+      "clients": [
+        {
+          "client_id": "d2c397ebfdde4bfc891c10b3365f8d25",
+          "loss": 0.28862807154655457,
+          "dice": 0.057130689512485185,
+          "hospital_id": 0.0
+        },
+        {
+          "client_id": "e4ca51827731409ba321c8c52d99a7d3",
+          "loss": 0.5038449168205261,
+          "dice": 9.557825225714467e-10,
+          "hospital_id": 1.0
+        },
+        {
+          "client_id": "2a46c762e43d4d04b9dfe95b1ef4c667",
+          "loss": 0.5090364217758179,
+          "dice": 8.749618668479897e-10,
+          "hospital_id": 2.0
+        }
+      ]
+    },
+    {
+      "round": 5,
+      "aggregated_loss": 0.3385230578341574,
+      "aggregated_metrics": {},
+      "clients": [
+        {
+          "client_id": "d2c397ebfdde4bfc891c10b3365f8d25",
+          "loss": 0.2861073315143585,
+          "dice": 0.05649704756718632,
+          "hospital_id": 0.0
+        },
+        {
+          "client_id": "e4ca51827731409ba321c8c52d99a7d3",
+          "loss": 0.46459880471229553,
+          "dice": 8.393457595623488e-10,
+          "hospital_id": 1.0
+        },
+        {
+          "client_id": "2a46c762e43d4d04b9dfe95b1ef4c667",
+          "loss": 0.4548700451850891,
+          "dice": 8.892612202160421e-10,
+          "hospital_id": 2.0
+        }
+      ]
+    },
+    {
+      "round": 1,
+      "aggregated_loss": 0.7191409344943065,
+      "aggregated_metrics": {},
+      "clients": [
+        {
+          "client_id": "f61f154994f441b38c606db76cfc9f7d",
+          "loss": 0.7236912250518799,
+          "dice": 0.12084543984383345,
+          "hospital_id": 2.0
+        },
+        {
+          "client_id": "1535605874474d01968f7cdcdd729508",
+          "loss": 0.7174892425537109,
+          "dice": 0.10169527205839954,
+          "hospital_id": 0.0
+        },
+        {
+          "client_id": "be10bf5159c54418bbf808c90e5dec65",
+          "loss": 0.7222297191619873,
+          "dice": 0.16138859651982784,
+          "hospital_id": 1.0
+        }
+      ]
+    },
+    {
+      "round": 2,
+      "aggregated_loss": 0.4359374321856589,
+      "aggregated_metrics": {},
+      "clients": [
+        {
+          "client_id": "f61f154994f441b38c606db76cfc9f7d",
+          "loss": 0.5346212983131409,
+          "dice": 8.77296915668957e-10,
+          "hospital_id": 2.0
+        },
+        {
+          "client_id": "be10bf5159c54418bbf808c90e5dec65",
+          "loss": 0.5519448518753052,
+          "dice": 8.360616088332051e-10,
+          "hospital_id": 1.0
+        },
+        {
+          "client_id": "1535605874474d01968f7cdcdd729508",
+          "loss": 0.3895176947116852,
+          "dice": 0.004522128096731329,
+          "hospital_id": 0.0
+        }
+      ]
+    },
+    {
+      "round": 3,
+      "aggregated_loss": 0.4719388490577914,
+      "aggregated_metrics": {},
+      "clients": [
+        {
+          "client_id": "1535605874474d01968f7cdcdd729508",
+          "loss": 0.4270731508731842,
+          "dice": 0.08401241692450098,
+          "hospital_id": 0.0
+        },
+        {
+          "client_id": "f61f154994f441b38c606db76cfc9f7d",
+          "loss": 0.5782179236412048,
+          "dice": 7.809192875685156e-10,
+          "hospital_id": 2.0
+        },
+        {
+          "client_id": "be10bf5159c54418bbf808c90e5dec65",
+          "loss": 0.573163628578186,
+          "dice": 8.762462075373456e-10,
+          "hospital_id": 1.0
+        }
+      ]
+    },
+    {
+      "round": 4,
+      "aggregated_loss": 0.3127079144963678,
+      "aggregated_metrics": {},
+      "clients": [
+        {
+          "client_id": "f61f154994f441b38c606db76cfc9f7d",
+          "loss": 0.3935549855232239,
+          "dice": 9.194615346874713e-10,
+          "hospital_id": 2.0
+        },
+        {
+          "client_id": "1535605874474d01968f7cdcdd729508",
+          "loss": 0.27490663528442383,
+          "dice": 0.0244024919276755,
+          "hospital_id": 0.0
+        },
+        {
+          "client_id": "be10bf5159c54418bbf808c90e5dec65",
+          "loss": 0.4066917598247528,
+          "dice": 8.430742839959926e-10,
+          "hospital_id": 1.0
+        }
+      ]
+    },
+    {
+      "round": 5,
+      "aggregated_loss": 0.33113339093496214,
+      "aggregated_metrics": {},
+      "clients": [
+        {
+          "client_id": "f61f154994f441b38c606db76cfc9f7d",
+          "loss": 0.4062986969947815,
+          "dice": 8.144516658314949e-10,
+          "hospital_id": 2.0
+        },
+        {
+          "client_id": "1535605874474d01968f7cdcdd729508",
+          "loss": 0.2987962067127228,
+          "dice": 0.06005402097818316,
+          "hospital_id": 0.0
+        },
+        {
+          "client_id": "be10bf5159c54418bbf808c90e5dec65",
+          "loss": 0.4055275619029999,
+          "dice": 8.112876967447669e-10,
+          "hospital_id": 1.0
+        }
+      ]
+    },
+    {
+      "round": 1,
+      "aggregated_loss": 0.3635117450975022,
+      "aggregated_metrics": {},
+      "clients": [
+        {
+          "client_id": "4ca015b920db46bf8895bdae08a489d9",
+          "loss": 0.4464554190635681,
+          "dice": 9.247379112453658e-10,
+          "hospital_id": 2.0
+        },
+        {
+          "client_id": "c00f4f05a7554f42b2c8d71c0e87434e",
+          "loss": 0.33022740483283997,
+          "dice": 0.074643220519647,
+          "hospital_id": 0.0
+        },
+        {
+          "client_id": "e60e922cd0d84d9e9bf53da232307528",
+          "loss": 0.43450814485549927,
+          "dice": 9.573790996086906e-10,
+          "hospital_id": 1.0
+        }
+      ]
+    },
+    {
+      "round": 2,
+      "aggregated_loss": 1.276127169154725,
+      "aggregated_metrics": {},
+      "clients": [
+        {
+          "client_id": "c00f4f05a7554f42b2c8d71c0e87434e",
+          "loss": 0.2515976130962372,
+          "dice": 0.06324669384598933,
+          "hospital_id": 0.0
+        },
+        {
+          "client_id": "4ca015b920db46bf8895bdae08a489d9",
+          "loss": 3.624028205871582,
+          "dice": 8.075975790888812e-10,
+          "hospital_id": 2.0
+        },
+        {
+          "client_id": "e60e922cd0d84d9e9bf53da232307528",
+          "loss": 3.666675329208374,
+          "dice": 7.582418998230978e-10,
+          "hospital_id": 1.0
+        }
+      ]
+    },
+    {
+      "round": 3,
+      "aggregated_loss": 0.5375959611726258,
+      "aggregated_metrics": {},
+      "clients": [
+        {
+          "client_id": "4ca015b920db46bf8895bdae08a489d9",
+          "loss": 1.185146450996399,
+          "dice": 8.56542496652235e-10,
+          "hospital_id": 2.0
+        },
+        {
+          "client_id": "c00f4f05a7554f42b2c8d71c0e87434e",
+          "loss": 0.2490442842245102,
+          "dice": 0.06561517553416558,
+          "hospital_id": 0.0
+        },
+        {
+          "client_id": "e60e922cd0d84d9e9bf53da232307528",
+          "loss": 1.2245969772338867,
+          "dice": 7.942044244479973e-10,
+          "hospital_id": 1.0
+        }
+      ]
+    },
+    {
+      "round": 4,
+      "aggregated_loss": 0.4931869939813074,
+      "aggregated_metrics": {},
+      "clients": [
+        {
+          "client_id": "4ca015b920db46bf8895bdae08a489d9",
+          "loss": 1.0609524250030518,
+          "dice": 8.991219227483249e-10,
+          "hospital_id": 2.0
+        },
+        {
+          "client_id": "e60e922cd0d84d9e9bf53da232307528",
+          "loss": 1.096230387687683,
+          "dice": 8.428538145199838e-10,
+          "hospital_id": 1.0
+        },
+        {
+          "client_id": "c00f4f05a7554f42b2c8d71c0e87434e",
+          "loss": 0.2400391399860382,
+          "dice": 0.069091652057486,
+          "hospital_id": 0.0
+        }
+      ]
+    },
+    {
+      "round": 5,
+      "aggregated_loss": 0.5003903927105777,
+      "aggregated_metrics": {},
+      "clients": [
+        {
+          "client_id": "4ca015b920db46bf8895bdae08a489d9",
+          "loss": 1.1590971946716309,
+          "dice": 7.872593896229851e-10,
+          "hospital_id": 2.0
+        },
+        {
+          "client_id": "c00f4f05a7554f42b2c8d71c0e87434e",
+          "loss": 0.2304144650697708,
+          "dice": 0.054158537916058826,
+          "hospital_id": 0.0
+        },
+        {
+          "client_id": "e60e922cd0d84d9e9bf53da232307528",
+          "loss": 1.0903222560882568,
+          "dice": 8.652940100550843e-10,
+          "hospital_id": 1.0
+        }
+      ]
+    },
+    {
+      "round": 1,
+      "aggregated_loss": 0.37303048934576644,
+      "aggregated_metrics": {},
+      "clients": [
+        {
+          "client_id": "2b3c33b0b340460d88593fba002dcab2",
+          "loss": 0.4500565826892853,
+          "dice": 8.186011382638192e-10,
+          "hospital_id": 2.0
+        },
+        {
+          "client_id": "c0ea7ab147be4b89afb213c7096bc303",
+          "loss": 0.42877084016799927,
+          "dice": 8.719218472230672e-10,
+          "hospital_id": 1.0
+        },
+        {
+          "client_id": "c04369860a8446bca4f7c8798f72be62",
+          "loss": 0.3443242311477661,
+          "dice": 0.08122093911672867,
+          "hospital_id": 0.0
+        }
+      ]
+    },
+    {
+      "round": 2,
+      "aggregated_loss": 0.7042238695441552,
+      "aggregated_metrics": {},
+      "clients": [
+        {
+          "client_id": "c0ea7ab147be4b89afb213c7096bc303",
+          "loss": 1.6319231986999512,
+          "dice": 8.926767519623624e-10,
+          "hospital_id": 1.0
+        },
+        {
+          "client_id": "c04369860a8446bca4f7c8798f72be62",
+          "loss": 0.2676744759082794,
+          "dice": 0.0821632561022164,
+          "hospital_id": 0.0
+        },
+        {
+          "client_id": "2b3c33b0b340460d88593fba002dcab2",
+          "loss": 1.7955654859542847,
+          "dice": 7.853541914015771e-10,
+          "hospital_id": 2.0
+        }
+      ]
+    },
+    {
+      "round": 3,
+      "aggregated_loss": 0.7384313254986169,
+      "aggregated_metrics": {},
+      "clients": [
+        {
+          "client_id": "2b3c33b0b340460d88593fba002dcab2",
+          "loss": 1.9404224157333374,
+          "dice": 7.73735839287859e-10,
+          "hospital_id": 2.0
+        },
+        {
+          "client_id": "c0ea7ab147be4b89afb213c7096bc303",
+          "loss": 1.7403234243392944,
+          "dice": 8.92587455336713e-10,
+          "hospital_id": 1.0
+        },
+        {
+          "client_id": "c04369860a8446bca4f7c8798f72be62",
+          "loss": 0.26191604137420654,
+          "dice": 0.08707285725285073,
+          "hospital_id": 0.0
+        }
+      ]
+    },
+    {
+      "round": 4,
+      "aggregated_loss": 0.7867081497075423,
+      "aggregated_metrics": {},
+      "clients": [
+        {
+          "client_id": "c0ea7ab147be4b89afb213c7096bc303",
+          "loss": 1.9524807929992676,
+          "dice": 9.381634843985687e-10,
+          "hospital_id": 1.0
+        },
+        {
+          "client_id": "2b3c33b0b340460d88593fba002dcab2",
+          "loss": 2.1281216144561768,
+          "dice": 8.040638016515445e-10,
+          "hospital_id": 2.0
+        },
+        {
+          "client_id": "c04369860a8446bca4f7c8798f72be62",
+          "loss": 0.2446138560771942,
+          "dice": 0.07742847210564022,
+          "hospital_id": 0.0
+        }
+      ]
+    },
+    {
+      "round": 5,
+      "aggregated_loss": 0.7313670352944788,
+      "aggregated_metrics": {},
+      "clients": [
+        {
+          "client_id": "c0ea7ab147be4b89afb213c7096bc303",
+          "loss": 1.8363330364227295,
+          "dice": 8.875922913320622e-10,
+          "hospital_id": 1.0
+        },
+        {
+          "client_id": "c04369860a8446bca4f7c8798f72be62",
+          "loss": 0.2512876093387604,
+          "dice": 0.08186694443213276,
+          "hospital_id": 0.0
+        },
+        {
+          "client_id": "2b3c33b0b340460d88593fba002dcab2",
+          "loss": 1.8467683792114258,
+          "dice": 8.76377095893055e-10,
+          "hospital_id": 2.0
         }
       ]
     }
